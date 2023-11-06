@@ -4,6 +4,8 @@ import { FatherOfAll } from "./components/pessoa/fatherofall";
 import { Pessoa } from "./components/pessoa/pessoa";
 import { ProfileUser } from "./components/postagem/profile";
 import { ProfileBackground } from "./components/postagem/profileBackground";
+import { List } from "./components/ReactFragment/list";
+import { OnClickEvent } from "./components/ReactEvents/eventOnClick";
 
 export default function Home() {
   return (
@@ -65,6 +67,11 @@ export default function Home() {
           postagem="https://blog.pariscityvision.com/fr/wp-content/uploads/2018/04/londres.jpg"
         ></ProfileUser>
       </ProfileBackground>
+      
+      <List/>
+
+      <OnClickEvent/>
+      
     </main>
   );
 }
