@@ -1,3 +1,4 @@
+import { HomePage } from "./components/conditionallyReturning/home";
 import { Card } from "./components/pessoa/card";
 import { Father } from "./components/pessoa/father";
 import { FatherOfAll } from "./components/pessoa/fatherofall";
@@ -5,7 +6,8 @@ import { Pessoa } from "./components/pessoa/pessoa";
 import { ProfileUser } from "./components/postagem/profile";
 import { ProfileBackground } from "./components/postagem/profileBackground";
 import { List } from "./components/ReactFragment/list";
-import { OnClickEvent } from "./components/ReactEvents/eventOnClick";
+
+// import { Form } from "./components/reactUseState/form";
 
 export default function Home() {
   return (
@@ -70,8 +72,9 @@ export default function Home() {
       
       <List/>
 
-      <OnClickEvent/>
-      
+      {/* <Form></Form> */}
+
+    <HomePage></HomePage>
     </main>
   );
 }
