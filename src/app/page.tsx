@@ -6,8 +6,31 @@ import { Pessoa } from "./components/pessoa/pessoa";
 import { ProfileUser } from "./components/postagem/profile";
 import { ProfileBackground } from "./components/postagem/profileBackground";
 import { List } from "./components/ReactFragment/list";
-
 // import { Form } from "./components/reactUseState/form";
+import { Task, TaskStructure } from "./components/listRenderization/taskList";
+
+//Lista renderizada
+const tasks: TaskStructure[] = [
+  {
+    id: crypto.randomUUID(),
+    titulo: "Atividade de React",
+    taskStatus: true,
+    
+  },
+  {
+    id: crypto.randomUUID(),
+    titulo: "Atividade de Banco de Dados",
+    taskStatus: false,
+    
+  },
+  {
+    id: crypto.randomUUID(),
+    titulo: "Atividade de Coding",
+    taskStatus: false,
+    
+  },
+]
+
 
 export default function Home() {
   return (
@@ -75,6 +98,19 @@ export default function Home() {
       {/* <Form></Form> */}
 
     <HomePage></HomePage>
+    
+    
+    <h2 style={{marginTop: 20}}>Lista de Atividades</h2>
+    {tasks.map((item) => (
+        <Task
+          id={item.id}
+          titulo={item.titulo}
+          taskStatus={item.taskStatus}
+        />
+        ))}
+
+
+
     </main>
   );
 }
