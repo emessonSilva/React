@@ -9,6 +9,9 @@ import { List } from "./components/ReactFragment/list";
 // import { Form } from "./components/reactUseState/form";
 import { Task, TaskStructure } from "./components/listRenderization/taskList";
 
+import { Button } from "./components/button/button";
+import { Counter } from "./components/useState/counter";
+
 //Lista renderizada
 const tasks: TaskStructure[] = [
   {
@@ -35,6 +38,7 @@ const tasks: TaskStructure[] = [
 export default function Home() {
   return (
     <main>
+
       <FatherOfAll>
         <Father>
           <Card>
@@ -97,7 +101,7 @@ export default function Home() {
 
       {/* <Form></Form> */}
 
-    <HomePage></HomePage>
+<HomePage></HomePage>
     
     
     <h2 style={{marginTop: 20}}>Lista de Atividades</h2>
@@ -107,9 +111,13 @@ export default function Home() {
           titulo={item.titulo}
           taskStatus={item.taskStatus}
         />
-        ))}
-
-
+        ))} 
+       <br></br>
+       <br></br>
+      <Button></Button>
+      <br></br>
+      <br></br>
+      <Counter></Counter>
 
     </main>
   );
