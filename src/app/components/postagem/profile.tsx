@@ -8,10 +8,12 @@ interface ProfileProps {
   cor: string;
   borda: number;
   postagem: any;
+  likedButton: any;
 }
 
 export function ProfileUser(props: ProfileProps) {
   return (
+    <>
     <div>
       <div style={{ display: "flex", alignItems: "center", position: "absolute", top: 10 }}>
         <img
@@ -30,7 +32,11 @@ export function ProfileUser(props: ProfileProps) {
         width={props.comprimentopostagem} 
         height={props.alturapostagem}/>
       </div>
+      <div>
+      <i className="fa fa-heart-o"></i>
+      </div>
     </div>
+    </>
   );
 }
 
